@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: reservation-system
+  datasource:
+    # Lee la variable de entorno, si no existe, usa lo que está después de los dos puntos (:)
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/reservation_db}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:admin123}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        # Expone solo las rutas de health e info
+        include: "health,info"
+  endpoint:
+    health:
+      # Muestra los detalles de health mientras no haya seguridad
+      show-details: "always"
