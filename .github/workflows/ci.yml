@@ -1,0 +1,8 @@
+name: CI
+on: [push]
+
+jobs:
+  pruebaWorkflow:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Es el primer mensaje con github Workflows"
