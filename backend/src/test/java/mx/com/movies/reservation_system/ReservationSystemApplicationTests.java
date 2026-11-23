@@ -24,7 +24,7 @@ class ReservationSystemApplicationTests {
         String sqlQuery = "SELECT 1";
         Integer result = jdbcTemplate.queryForObject(sqlQuery, Integer.class);
 
-        assertEquals(1, result);
+        assertEquals(0, result);
     }
 
 }
